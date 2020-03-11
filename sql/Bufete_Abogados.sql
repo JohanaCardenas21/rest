@@ -17,40 +17,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `slimapp`
+-- Database: `Bufete_Abogados`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Table structure for table `Abogado`
 --
 
-CREATE TABLE `customers` (
-  `id` int(11) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `city` varchar(255) NOT NULL,
-  `state` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ create table Abogado
+ (id_abogado int primary key, 
+ nom_abogado varchar(20),
+ apell_abogado varchar(20),
+ tel_abogado bigint(10));
+ ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `customers`
+-- Dumping data for table `Abogado`
 --
 
-INSERT INTO `customers` (`id`, `first_name`, `last_name`, `phone`, `email`, `address`, `city`, `state`) VALUES
-(2, 'Sam', 'Smith', '333-333-3333', 'ssmith@yahoo.com', '33 Birch Rd', 'Miami', 'FL'),
-(3, 'Brad', 'Traversy', '333-333-3333', 'brad@test.com', '333 South st', 'Portland', 'ME');
+INSERT INTO `Abogado` (`id_abogado`, `nom_abogado`, `apell_abogado`, `tel_abogado`) VALUES
+(01,'Andres Enrique','Garcia Hernandez',3214567888),
+(02,'Jose Fernando','Trejos López',3127563421);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `customers`
+-- Indexes for table `Abogado`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
